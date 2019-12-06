@@ -1,5 +1,8 @@
 const baseUrl = "http://localhost:3003";
 class TypeService {
+  /**
+   * liste type
+   */
   static async list() {
     let init = {
       method: "GET",
@@ -10,7 +13,10 @@ class TypeService {
     let call = await fetch(`${baseUrl}/types`, init);
     return call;
   }
-  //detail
+  /**
+   * details type
+   * @param {*} id
+   */
 
   static async details(id) {
     let init = {
@@ -22,6 +28,10 @@ class TypeService {
     let call = await fetch(`${baseUrl}/types/${id}`, init);
     return call;
   }
+  /**
+   * create type
+   * @param {*} body
+   */
   static async create(body) {
     let init = {
       method: "POST",
