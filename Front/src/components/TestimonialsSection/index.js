@@ -17,7 +17,7 @@ function TestimonialsSection(props) {
             {
               avatar:
                 "http://www.alphafoxicare.com/wp-content/uploads/2012/08/Vacances-%C3%A0-Belle-Ile.jpg",
-              name: "Maher Knis",
+              name: "Compgany",
               quote:
                 "Les tarifs de dernière minute peuvent concerner les vols secs aussi bien que les vols avec prestations supplémentaires.Profitez de nos offres exclusives.",
               company: ""
@@ -25,7 +25,7 @@ function TestimonialsSection(props) {
             {
               avatar:
                 "https://image.freepik.com/photos-gratuite/passeport-avion-boussole-place-carte-concept-voyage_11304-1164.jpg",
-              name: "Afef Hnid",
+              name: "Compgany",
               quote:
                 "Les réservations de billets d’avion de dernière minute sont particulièrement adaptées aux personnes qui n'ont pas de contraintes de planning tant au niveau professionnel que familial!",
               company: ""
@@ -33,7 +33,7 @@ function TestimonialsSection(props) {
             {
               avatar:
                 "https://www.govoyages.com/blog/wp-content/uploads/sites/14/2013/05/passport-2733068_960_720-960x617.jpg",
-              name: "Maher Afef",
+              name: "Compgany",
               quote:
                 "Ce type de vol permet de profiter d'opportunités inattendues et de découvrir des destinations auxquelles on n'aurait pas songé sans ces promotions.",
               company: ""

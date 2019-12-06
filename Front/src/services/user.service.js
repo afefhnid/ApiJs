@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3002";
+const baseUrl = "http://localhost:3003";
 class UserService {
   static async list() {
     let init = {
@@ -23,7 +23,6 @@ class UserService {
     return call;
   }
   static async create(body) {
-    console.log(body);
     let init = {
       method: "POST",
       headers: {

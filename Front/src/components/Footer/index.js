@@ -10,13 +10,7 @@ function Footer(props) {
           <div className="column is-5 is-4-widescreen">
             <div className="summary">
               <Link className="brand" to="/">
-                <div className="brand-icon">
-                  {/**  <img
-                    className="FooterComponent__no-classname"
-                    src="https://www.sim-airways.com/images/media/logo/logo.png"
-                    // style={{ maxHeight: "136px", maxwidth: "50px " }}
-                  />*/}
-                </div>
+                <div className="brand-icon"></div>
               </Link>
               <p className="FooterComponent__no-classname">
                 A short description of what you do here
@@ -89,11 +83,3 @@ function Footer(props) {
 }
 
 export default Footer;
-
-<a onClick={() => this.props.addfavoris(this.props.data._id)}>
-  {this.state.serie.map(serie => {
-    this.state.favoris.map((favoris, indexserie) => {
-      serie._id == favoris.id_serie ? <p>oui</p> : <p>non</p>;
-    });
-  })}
-</a>;

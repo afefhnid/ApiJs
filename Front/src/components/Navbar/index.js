@@ -1,12 +1,11 @@
 import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
-import useFakeAuth from "./../../util/use-fake-auth.js";
+
 import "./styles.scss";
 const signin = () => {};
 
 function Navbar(props) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [auth, signin, signout] = useFakeAuth();
 
   const logoImg = props.dark
     ? "https://www.sim-airways.com/images/media/logo/logo.png"
@@ -42,9 +41,16 @@ function Navbar(props) {
         <div className={"navbar-menu" + (menuOpen ? " is-active" : "")}>
           <div className="navbar-end">
             <div className="navbar-item has-dropdown is-hoverable">
-              <Link className="navbar-link" to="/Home">
-                Account
-              </Link>
+              {JSON.parse(localStorage.getItem("user")).type_id.name ===
+              "user" ? (
+                <Link className="navbar-link" to="/Home">
+                  Account
+                </Link>
+              ) : (
+                <Link className="navbar-link" to="/Admin">
+                  Account
+                </Link>
+              )}
               <div className="navbar-dropdown is-boxed">
                 <Link
                   className="navbar-item"

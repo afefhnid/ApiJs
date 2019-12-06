@@ -4,10 +4,7 @@ class User extends Component {
   constructor(props) {
     super(props);
   }
-  componentDidMount() {
-    console.log(this.props.data);
-  }
-  //'c'/post/id est la route
+
   render() {
     return (
       <tr key={this.props.index}>
@@ -20,7 +17,8 @@ class User extends Component {
           </Link>
         </td>
 
-        <td>{this.props.data.name}</td>
+        <td>{this.props.data.firstName}</td>
+        <td>{this.props.data.lastName}</td>
         <td>{this.props.data.email}</td>
         <td>
           <button

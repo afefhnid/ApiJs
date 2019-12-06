@@ -57,7 +57,6 @@ class UserController {
     let body = {};
     try {
       let id = request.params.id;
-      console.log(id);
       await User.deleteOne({ _id: id });
       body = { message: " User delete" };
     } catch (error) {
@@ -93,7 +92,6 @@ class UserController {
     let body = {};
     try {
       let user = await User.findById(request.params.id).populate("type_id");
-      console.log(user);
       Object.assign(user, request.body);
       await user.save();
       body = { user, message: " User Information" };

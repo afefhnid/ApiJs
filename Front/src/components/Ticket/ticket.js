@@ -10,9 +10,7 @@ class Ticket extends Component {
       isOpen: false
     };
   }
-  componentDidMount() {
-    console.log(this.props.data);
-  }
+
   openInfo() {
     if (this.state.isOpen === false) {
       this.setState({ isOpen: true });
@@ -25,7 +23,6 @@ class Ticket extends Component {
   }
   //'c'/post/id est la route
   render() {
-    console.log(this.props.data.company_id, this.props.data._id);
     return (
       <tr key={this.props.index}>
         <td>

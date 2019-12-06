@@ -12,7 +12,6 @@ class NavHero extends Component {
     this.setState({
       [e.target.name]: e.target.value
     });
-    console.log(e.target.name);
   }
   render(h) {
     console.log(JSON.parse(localStorage.getItem("user")));

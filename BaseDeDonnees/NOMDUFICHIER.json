@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5dea9e3e4edfe50fc09beab7"},"firstName":"user","lastName":"user","phone":"00000000","email":"user@gmail.com","password":"user","type_id":{"$oid":"5de0e78a1488fc302ca2d3c6"},"__v":0}
+{"_id":{"$oid":"5dea9e6c4edfe50fc09beab8"},"firstName":"admin","lastName":"admin","phone":"00000000","email":"admin@gmail.com","password":"admin","type_id":{"$oid":"5de67b8d65f04e0b54df74e5"},"__v":0}

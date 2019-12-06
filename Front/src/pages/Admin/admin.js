@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-//import "bootstrap/dist/css/bootstrap.min.css";
 import User from "./user";
 import Compagny from "./compagny";
 import UserService from "../../services/user.service";
@@ -17,37 +16,43 @@ class Admin extends Component {
       displayCompagny: "none"
     };
   }
-  componentWillMount() {
-    console.log("je suis la");
-  }
+  /**
+   * get the list off Users and Compagny
+   */
   async componentDidMount() {
-    //recuperer des postes sepuis l'Api
-    console.log("test");
     let response = await UserService.list();
     if (response.ok) {
-      //la rÃ©ponse est de type 200
       let data = await response.json();
-      console.log(data);
       this.setState({
         users: data
       });
     }
     let responseCompagny = await CompanyService.list();
     if (responseCompagny.ok) {
-      //la rÃ©ponse est de type 200
       let data = await responseCompagny.json();
-      console.log(data);
       this.setState({
         compagny: data
       });
     }
   }
+  /**
+   * upadate user
+   * @param {id} id
+   */
   async updateUser(id) {
     this.props.history.push(`/update/${id}`);
   }
+  /**
+   * upadate compagny
+   * @param {id} id
+   */
   async updatecompagny(id) {
     this.props.history.push(`/Company/update/${id}`);
   }
+  /**
+   * Delete User
+   * @param {id} id
+   */
   async deleteUser(id) {
     let response = await UserService.delete(id);
     if (response.ok) {
@@ -60,12 +65,14 @@ class Admin extends Component {
       console.log(response);
     }
   }
+  /**
+   * Delete Compagny
+   * @param {id} id
+   */
   async deleteCompagany(id) {
     let response = await CompanyService.delete(id);
     if (response.ok) {
-      console.log(response);
       let compagny = this.state.compagny;
-      console.log(compagny);
       let index = this.state.compagny.company.findIndex(
         compagny => compagny.id === id
       );
@@ -76,17 +83,14 @@ class Admin extends Component {
     }
   }
 
+  /**
+   * switch view user /compagny
+   */
   getUser() {
     this.setState({
       displayUser: "block",
       displayCompagny: "none"
     });
-  }
-  adduser() {
-    this.props.history.push("/addUser");
-  }
-  addcompany() {
-    this.props.history.push("/addCompany");
   }
   getcompany() {
     this.setState({
@@ -94,14 +98,28 @@ class Admin extends Component {
       displayUser: "none"
     });
   }
-  getTicket() {
-    this.props.history.push("/Ticket");
+  /**
+   * add user compagny and Ticket
+   */
+
+  adduser() {
+    this.props.history.push("/addUser");
   }
+  addcompany() {
+    this.props.history.push("/addCompany");
+  }
+
   addTicket(id) {
     this.props.history.push(`/addTicket/${id}`);
   }
+  /**
+   * get tickets list
+   */
+  getTicket() {
+    this.props.history.push("/Ticket");
+  }
+
   render() {
-    console.log(this.state.compagny);
     return (
       <div>
         <NavHero trie={trieValue => this.setTrie(trieValue)} />
@@ -123,19 +141,20 @@ class Admin extends Component {
           </button>
         </div>
         <div style={{ display: this.state.displayUser }}>
-          <h1 style={{ color: "red" }}>{this.state.title}</h1>
+          <h1 style={{ color: "#c06eef", fontSize: "37px" }}>Blog Users</h1>
 
           <button onClick={() => this.adduser()} id="login-btn">
-            Ajouter une users
+            Ajouter un users
           </button>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <table className="table">
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>Name</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
                   <th>Email</th>
-                  <th>Date de naissance</th>
+                  <th>Supprimer</th>
                   <th>Modifier</th>
                 </tr>
               </thead>
@@ -160,8 +179,10 @@ class Admin extends Component {
           </div>
         </div>
         <div style={{ display: this.state.displayCompagny }}>
-          <h1 style={{ color: "red" }}>{this.state.title} </h1>
-          <button onClick={() => this.addcompany()}>
+          <h1 style={{ color: "#c06eef", fontSize: "37px" }}>
+            {this.state.title}{" "}
+          </h1>
+          <button id="login-btn" onClick={() => this.addcompany()}>
             Ajouter une compagny
           </button>
           <div style={{ display: "flex", justifyContent: "center" }}>

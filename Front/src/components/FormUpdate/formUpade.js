@@ -16,7 +16,6 @@ class FormUpade extends React.Component {
     this.setState({
       [e.target.name]: e.target.value
     });
-    console.log(e.target.value);
   }
 
   async onSumbite(e) {
@@ -34,11 +33,9 @@ class FormUpade extends React.Component {
       email: this.props.user.email,
       type_id: this.props.user.type_id
     };
-    console.log(body);
     let response = await UserService.update(id, body);
     if (response.ok) {
       let data = await response.json();
-      console.log(data.user);
       localStorage.setItem("user", JSON.stringify(data.user));
       window.location.reload();
       this.setState({
@@ -50,7 +47,6 @@ class FormUpade extends React.Component {
     }
   }
   render(h) {
-    console.log(this.props.user._id);
     // this.props.display
     return (
       <div>

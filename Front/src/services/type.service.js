@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3002";
+const baseUrl = "http://localhost:3003";
 class TypeService {
   static async list() {
     let init = {

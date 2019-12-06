@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-
-import Login from "../../components/login";
-import SignUp from "../../components/singup";
+import Login from "../../components/login/login";
+import SignUp from "../../components/singup/singup";
 import "./login.css";
+
 class LoginPage extends Component {
   constructor(props) {
     super(props);
@@ -11,6 +11,7 @@ class LoginPage extends Component {
       displaySignUp: "none"
     };
   }
+  //diplay compoenet login signin
   login() {
     this.setState({
       displayLogin: "block",

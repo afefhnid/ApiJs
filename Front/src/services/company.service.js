@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3002";
+const baseUrl = "http://localhost:3003";
 class CompanyService {
   static async list() {
     let init = {
@@ -35,7 +35,6 @@ class CompanyService {
   }
 
   static async getCompanyByName(idUser) {
-    console.log("fff", idUser);
     let init = {
       method: "GET",
       headers: {
@@ -123,8 +122,6 @@ class CompanyService {
   }
 
   static async update(id, body) {
-    console.log(id);
-    console.log(body);
     let init = {
       method: "PUT",
       headers: {

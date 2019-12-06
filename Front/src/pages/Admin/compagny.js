@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { withRouter } from "react-router-dom";
@@ -11,9 +10,10 @@ class Compagny extends Component {
       isOpen: false
     };
   }
-  componentDidMount() {
-    console.log(this.props.data);
-  }
+
+  /**
+   * show ticket for compagny
+   */
   openInfo() {
     if (this.state.isOpen === false) {
       this.setState({ isOpen: true });
@@ -24,7 +24,7 @@ class Compagny extends Component {
   showTicket() {
     this.props.history.push("/Ticket");
   }
-  //'c'/post/id est la route
+
   render() {
     return (
       <tr key={this.props.index}>
@@ -42,11 +42,19 @@ class Compagny extends Component {
                 <div
                   style={{ display: "flex", justifyContent: " space-between" }}
                 >
-                  Ticket :
-                  {this.props.data.ticket.map((item, index) => {
-                    return <div>{item.destination}</div>;
-                  })}
-                  <button onClick={() => this.showTicket()}>Show Ticket</button>
+                  {this.props.data.ticket.length < 2 ? (
+                    this.props.data.ticket.map((item, index) => {
+                      return <div>{item.destination}</div>;
+                    })
+                  ) : (
+                    <div>{` ${this.props.data.ticket.length} tickets existe `}</div>
+                  )}
+                  <button
+                    style={{ backgroundColor: "#7c64d3" }}
+                    onClick={() => this.showTicket()}
+                  >
+                    Show
+                  </button>
                 </div>
               ) : null}
             </div>
@@ -65,7 +73,6 @@ class Compagny extends Component {
           </button>
         </td>
         <td>
-          <td> </td>
           <button
             className="btn btn-danger"
             onClick={() => this.props.updatecompagny(this.props.data._id)}
