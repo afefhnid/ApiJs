@@ -1,0 +1,36 @@
+.FooterComponent {
+    .menu-label {
+        font-size     : 1.275rem;
+        font-weight   : 600;
+        text-transform: none;
+        letter-spacing: 0;
+        color         : #463853;
+
+        &.menu-label:not(:last-child) {
+            margin-bottom: 0.6rem;
+        }
+    }
+
+    .menu-list {
+        margin-left: -0.75rem;
+        font-size  : 1.1rem;
+
+        img {
+            display       : inline-block;
+            vertical-align: middle;
+            margin-right  : 0.8rem;
+        }
+    }
+}
+
+.FooterComponent__no-classname {
+    width: 130px;
+}
+
+.FooterComponent__no-classname {
+    margin-top: 1rem;
+}
+
+.FooterComponent__no-classname {
+    margin-top: 1rem;
+}

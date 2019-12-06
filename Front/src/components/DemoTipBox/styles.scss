@@ -1,0 +1,17 @@
+.DemoTipBox {
+    position        : relative;
+    margin-top      : 20px;
+    padding         : 30px 20px 20px 20px;
+    border          : 1px solid #e1db93;
+    background-color: #fffdc1;
+}
+
+.DemoTipBox__label {
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    padding         : 2px 5px;
+    background-color: #f4eb7f;
+    font-size       : 11px;
+    text-transform  : uppercase;
+}

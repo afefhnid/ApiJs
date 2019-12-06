@@ -1,0 +1,154 @@
+body {
+  background-color: #515151;
+}
+
+body a {
+  transition: color 0.2s;
+}
+
+body a:hover,
+body a:active,
+body a:focus {
+  text-decoration: none;
+}
+
+.table {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.75);
+}
+
+.table caption {
+  background-color: #bed2d9;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.75);
+  color: #333;
+  font-family: "Passion One", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.table caption a {
+  color: #f07509;
+}
+
+.table caption a:hover,
+.table caption a:focus,
+.table caption a:active {
+  color: #f89d4e;
+}
+
+thead {
+  font-family: "Bitter", serif;
+}
+
+thead tr {
+  background-color: #bed2d9;
+}
+
+thead tr .points {
+  text-align: center;
+}
+
+tbody {
+  font-family: "Lato", sans-serif;
+}
+
+tbody tr {
+  background-color: #ecf1f2;
+}
+
+tbody tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: 4px;
+}
+
+tbody tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: 4px;
+}
+
+tbody tr img {
+  height: 28px;
+  margin-right: 10px;
+}
+
+tbody tr a {
+  color: #4b8083;
+}
+
+tbody tr a:hover,
+tbody tr a:focus,
+tbody tr a:active {
+  color: #f89d4e;
+}
+
+tbody tr .points {
+  text-align: center;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f7f9fe;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color: #eeeeee;
+}
+
+.table > tbody > tr > td {
+  vertical-align: middle;
+}
+
+thead span.recent,
+thead span.alltime {
+  color: #4b8083;
+  transition: color 0.2s;
+}
+
+thead span.recent:hover,
+thead span.recent:focus,
+thead span.recent:active,
+thead span.alltime:hover,
+thead span.alltime:focus,
+thead span.alltime:active {
+  color: #5e9fa3;
+}
+
+thead span.active {
+  color: #f07509;
+}
+
+thead span.active:hover,
+thead span.active:focus,
+thead span.active:active {
+  color: #f89d4e;
+}
+
+thead span.active .glyphicon {
+  display: inline;
+}
+
+thead span:hover {
+  cursor: pointer;
+}
+
+thead span .glyphicon {
+  display: none;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

@@ -1,0 +1,16 @@
+.NavbarComponent {
+    &.is-dark {
+        background-color: transparent;
+
+        .navbar-end,
+        .navbar-start {
+            &>.navbar-item {
+                &:hover {
+                    // We use .is-dark to ensure text is white
+                    // So need to override black hover bg here
+                    background-color: rgba(0, 0, 0, 0.05) !important;
+                }
+            }
+        }
+    }
+}

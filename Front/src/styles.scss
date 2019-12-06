@@ -1,0 +1,83 @@
+@charset "utf-8";
+@import "../node_modules/bulma/bulma.sass";
+
+.navbar {
+  &.is-spaced {
+    @media screen and (min-width: 1088px) {
+      padding-top   : 1.7rem;
+      padding-bottom: 1.7rem;
+    }
+  }
+}
+
+.container {
+
+  // Don't increase container width at fullHD
+  // breakpoint. Too wide for this theme.
+  @media screen and (min-width: 1472px) {
+    max-width: 1152px;
+  }
+}
+
+// Increase padding on medium section.
+.section {
+  &.is-medium {
+    @media screen and (min-width: 769px) {
+      padding-top   : 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+}
+
+// Wrapper around section title/subtitle with
+// extra bottom margin.
+// Center everything by default
+.section-header {
+  margin-bottom: 3rem;
+  text-align   : center;
+}
+
+// Override card style
+.card {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+}
+
+.card-content {
+  padding: 2rem;
+}
+
+// Override button style
+.button {
+  font-size     : 0.8rem;
+  text-transform: uppercase;
+  font-weight   : 700;
+  padding       : 1.1em 2em;
+  height        : auto;
+  box-shadow    : 0 4px 6px rgba(50, 50, 93, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  &.is-medium {
+    font-size: 0.9rem;
+  }
+
+  &.is-large {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    transform : translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  }
+
+  // Change color on primary modifier
+  &.is-primary {
+    background-color: #6a3ea4;
+
+    &:hover {
+      background-color: #7c41cb;
+    }
+
+    &.is-inverted {
+      color: #7c41cb;
+    }
+  }
+}

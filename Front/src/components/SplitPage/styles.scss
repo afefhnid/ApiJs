@@ -1,0 +1,38 @@
+.SplitPage {
+    display       : flex;
+    height        : 100vh;
+    flex-direction: column;
+}
+
+.SplitPage__top-image-mobile {
+    width              : 100%;
+    height             : 70px;
+    background         : url(https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: center center;
+}
+
+.SplitPage__inner-wrapper {
+    display: flex;
+    width  : 100%;
+    height : 100%;
+}
+
+.SplitPage__left {
+    width              : 40%;
+    background         : url(https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: center center;
+}
+
+.SplitPage__right {
+    display         : flex;
+    flex-grow       : 1;
+    height          : 100%;
+    overflow        : auto;
+    padding         : 0 20px;
+    background-color: white;
+    align-items     : center;
+}

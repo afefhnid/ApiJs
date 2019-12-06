@@ -1,0 +1,41 @@
+.Features {
+    // Hides the bottom border of last row
+    // since the border is applied using 1px box shadow
+    // and that gets cut off with overflow hidden.
+    overflow: hidden;
+}
+
+.Features__column {
+    display: flex;
+
+    // Make card stretch to height of column so that
+    // all cards in a row are the same height.
+    align-items: stretch;
+
+    // Center card within column
+    // Only has an effect if width of child card
+    // is less than 100%.
+    justify-content: center;
+
+    // Acts as bottom border but border on last row
+    // will be hidden due to overflow: hidden on parent.
+    box-shadow                       : 0 1px 0 0 #efefef;
+
+    // For tablet+ add left border to columns on right
+    @media screen and (min-width: 769px) {
+        &:nth-child(2n) {
+            border-left: 1px solid #efefef;
+        }
+    }
+}
+
+.Features__no-classname {
+    width  : 100%;
+    padding: 36px;
+}
+
+.Features__image {
+    margin       : 0 auto;
+    margin-bottom: 30px;
+    max-width    : 180px;
+}

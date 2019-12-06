@@ -1,0 +1,16 @@
+.FeaturesSection__frame {
+    position: relative;
+    width   : 100%;
+
+    // Negative top marginm
+    margin-top: -22rem;
+
+    // Centered
+    margin-left : auto;
+    margin-right: auto;
+
+    background-color: white;
+    box-shadow      : 0 9px 28px rgba(0, 0, 0, 0.24);
+    border-radius   : 5px;
+    overflow        : hidden;
+}
