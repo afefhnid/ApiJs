@@ -1,6 +1,6 @@
 # ApiJs
 
-Application de réservation en ligne avec tes prix promotionnel
+Application de réservation en ligne avec des prix promotionnel
 ce qui permet d’ s’offrir un voyage vraiment pas cher.
 Permette  aux clients de  réserver en ligne via cette application en Proposez des bons cadeaux
 Les tarifs de dernière minute peuvent concerner les vols secs aussi bien que les vols avec prestations supplémentaires.
