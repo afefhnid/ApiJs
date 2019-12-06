@@ -43,7 +43,7 @@ class AddCompany extends React.Component {
         success: true,
         messageSucces: "authentication"
       });
-      this.props.history.push("/Home");
+      this.props.history.push("/Admin");
     }
   }
   render() {
